@@ -1,0 +1,8 @@
+mongod --dbpath /Applications/MAMP/htdocs/projects/scraping/tester/expr-mongtst/data
+
+--NEW TERMINAL
+> mongo
+> use expr-mongtst
+----------------------------
+
+DEBUG=expr-mongtst:* npm start

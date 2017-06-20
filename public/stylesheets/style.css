@@ -1,0 +1,68 @@
+
+/* Style for custom file input */
+
+.button-base {
+  position: relative;
+  width: 150px;
+  height:50px;
+  margin-bottom: 25px;
+}
+
+.file-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height:50px;  
+  z-index: 100;
+  background-color: #1EAEDB;
+}
+
+.button-label {
+  margin-top: 9%;
+  color: #FFF;
+  text-align: center;
+}
+
+.open-file {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height:50px;
+  z-index: 200;
+  opacity: 0.0;
+}
+
+#userlist {
+  padding: 10px 20px;
+  margin: -20px -30px;
+}
+.list-file {
+  border: #ec63c2 solid 10px;
+}
+.list-db {
+  border: #78f3dc solid 10px;
+}
+
+#listlabel {
+  color: white;
+  display: inline-block;
+  margin: 14px -2px;
+  padding: 10px 15px;
+}
+.label-file {
+  background-color: #ec63c2;
+}
+.label-db{
+  background-color: #78f3dc;
+}
+
+.row-highlight {
+  background-color: yellow;
+}
+
+.progress-bar {
+  
+}

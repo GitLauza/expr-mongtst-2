@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  div(class='row')
+    div(class='twelv column')
+      h1= title
+      p Welcome to #{title} | #[a(id='loadDB', href='#') Load from DB] | #[a(id='clicka', href='#') CLICKA!] 
+      
+      form(id='aform' action='/', method='post', enctype='multipart/form-data')
+        div(class='button-base')
+          div(class='file-button')
+            div(class='button-label') Open JSON
+          input(id='filedialogue' name='afile' type='file' class='open-file')
+
+      progress(class='progress-bar' value='' max='')
+
+      form(id='theform' action='users/upload', method='post', enctype='multipart/form-data')
+        input(name='thetxt' type='text')
+        input(name='thefile' type='file' style='margin-left: 10px;')
+        input(name='thesubmit' type='submit')
+
+      // Wrapper
+      #wrapper
+        p(id='response') !{responsetxt}
+        label(id='listlabel') List from file
+        div(id='userlist')
+          table(id='tbllist' class='u-full-width')
+            thead
+              tr
+                th Country
+                th Song
+                th Artist
+                th Link
+            tbody
+
+      // --Wrapper
