@@ -1,6 +1,7 @@
 // App: Participants
+// FIXING DB VERSION WITHOUT DB CONNECTION
 // This version handles automatic loading of json-file when loading.
-// Also loads from DB when clicking "Load from DB". 
+// --Also loads from DB when clicking "Load from DB". 
 
 var express = require('express');
 var path = require('path');
@@ -13,10 +14,11 @@ const formidable = require('express-formidable');
 // File System
 var fs = require('fs');
 
+// NODB Comment
 // Mongo
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/expr-mongtst');
+// var mongo = require('mongodb');
+// var monk = require('monk');
+// var db = monk('localhost:27017/expr-mongtst');
 
 var formiDaBL = require('formidable');
 
@@ -38,11 +40,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// NODB Commenbt
 // Make db accessible to the router
-app.use(function(req,res,next){
-  req.db = db;
-  next();
-});
+// app.use(function(req,res,next){
+//   req.db = db;
+//   next();
+// });
 
 app.use(formidable({
     uploadDir: path.join(__dirname, 'files'),
