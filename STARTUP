@@ -1,4 +1,4 @@
-mongod --dbpath /Applications/MAMP/htdocs/projects/scraping/tester/expr-mongtst/data
+mongod --dbpath {path to working directory}/data
 
 --NEW TERMINAL
 > mongo
