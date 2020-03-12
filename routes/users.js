@@ -36,20 +36,21 @@ router.get('/userload', function(req, res) {
 });
 
 // NODB Comment
-// router.post('/uploadtodb', (req, res) => {
-//   console.log('Content-Type: ' + req.get('Content-Type'));  
-//   req.fields; // contains non-file fields 
-//   req.files; // contains files 
-//   var thefile = req.files[Object.keys(req.files)[0]];
-//   fs.readFile(thefile.path, 'utf8', (err, data) => {
-//     if (err) throw err;
-//         console.log(data);
-//     console.log(data);
-//     // res.status(200).send('POST ->/ upload! FILE = ' + thefile.name);
+router.post('/uploadtodb', (req, res) => {
+  console.log('Content-Type: ' + req.get('Content-Type'));  
+  req.fields; // contains non-file fields 
+  req.files; // contains files 
+  var thefile = req.files[Object.keys(req.files)[0]];
+  fs.readFile(thefile.path, 'utf8', (err, data) => {
+    if (err) 
+      throw err;
+        
+    console.log(data);
+    // res.status(200).send('POST ->/ upload! FILE = ' + thefile.name);
     
-//     //res.json(data);
-//     res.end();
-//   });
-// });
+    //res.json(data);
+    res.end();
+  });
+});
 
 module.exports = router;

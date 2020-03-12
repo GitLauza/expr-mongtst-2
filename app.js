@@ -1,6 +1,7 @@
 // App: Participants
-// FIXING DB VERSION WITHOUT DB CONNECTION
+// FIXING DB CONNECTION [01]
 // This version handles automatic loading of json-file when loading.
+// Will also try to connect to provided DB
 // --Also loads from DB when clicking "Load from DB". 
 
 var express = require('express');
@@ -14,11 +15,12 @@ const formidable = require('express-formidable');
 // File System
 var fs = require('fs');
 
-// NODB Comment
 // Mongo
-// var mongo = require('mongodb');
-// var monk = require('monk');
-// var db = monk('localhost:27017/expr-mongtst');
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/test').then(() => {
+  console.log('DB Connected successfully!')
+});
 
 var formiDaBL = require('formidable');
 
