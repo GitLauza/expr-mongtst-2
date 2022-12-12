@@ -11,7 +11,7 @@
     "cookie-parser": "~1.4.3",
     "core-js": "~3.6.4",
     "debug": "~2.6.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-formidable": "^1.0.0",
     "mongodb": "^3.5.5",
     "monk": "^7.1.2",
